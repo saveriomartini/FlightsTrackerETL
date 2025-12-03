@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package_Vols"
   DTS:PackageType="5"
-  DTS:VersionBuild="135"
-  DTS:VersionGUID="{707EC63F-4FF5-4649-94E9-EA91CE4DACC5}">
+  DTS:VersionBuild="136"
+  DTS:VersionGUID="{13325047-C8B3-49F2-960A-15511AF03657}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAADmO0NomKbH2Jv9A5C8qSQwX+gzZy2Let8ZFSniABtrIAAAAAAOgAAAAAIAACAAAABj2tGcoZyvSjuI9R0kwj8TUpgvewbnoOBkAZtwttJMtSAAAABcxOU6G3UdBntQCQr+ocLfkwUcErjB6UPIe8nA3lFAfUAAAACnueNAQgEsKBvK7nAjsjAtSRVf2TrEiaBddMJ4uxotBR+I7U8nVAL1N7XZiqOMbzhKwlVpAwOe0r+OOu1p4rP5</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/Zl1JKzRGkrf82mmXa5FD6xAt2Q0z8akS2H1VzFOtjQAAAAAOgAAAAAIAACAAAAC/8CJRn9lZ03x4n8YlJZvUkqSlg48UW+gjmzuis7//0iAAAACvLRGYh3/9jPQ86+GV1DM9GSq2s1FaBZAmjtTcIdetBkAAAACJhGgj0aR177Tr6YJLFdb46L+xqEpXN+TVbqyk5ttI+OdVB2T7xllvpNxL6d5rQsAi0Rxr4Mj2Dw0a2NrpvOgW</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -4670,7 +4670,7 @@ where [refTable].[NAME] = ?</property>
                 <property
                   dataType="System.String"
                   description="Indicates whether to reference metadata in an XML format."
-                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IATA_CODE" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NAME" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="ID" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="IATA_CODE" dataType="DT_STR" length="2" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="NAME" dataType="DT_STR" length="255" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="CURRENT_RECORD" dataType="DT_BOOL" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
                 <property
                   containsID="true"
                   dataType="System.String"
@@ -8286,24 +8286,24 @@ where [refTable].[NAME] = ?</property>
               startId="Package\ETL Vols\Recherche Compagnie ID.Outputs[Lookup Error Output]" />
             <path
               refId="Package\ETL Vols.Paths[Lookup Match Output3]"
-              endId="Package\ETL Vols\Union All.Inputs[Union All Input 1]"
+              endId="Package\ETL Vols\Recherche Avion ID.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\ETL Vols\Recherche Compagnie ID.Outputs[Lookup Match Output]" />
+              startId="Package\ETL Vols\Recherche Aeroport arrivee ID.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\ETL Vols.Paths[Lookup Match Output]"
-              endId="Package\ETL Vols\Recherche Aeroport arrivee ID.Inputs[Lookup Input]"
-              name="Lookup Match Output"
-              startId="Package\ETL Vols\Recherche Aeroport depart ID.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\ETL Vols.Paths[Lookup Match Output1]"
+              refId="Package\ETL Vols.Paths[Lookup Match Output2]"
               endId="Package\ETL Vols\Conversion int en string staging.Inputs[Data Conversion Input]"
               name="Lookup Match Output"
               startId="Package\ETL Vols\Recherche Avion ID.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\ETL Vols.Paths[Lookup Match Output2]"
-              endId="Package\ETL Vols\Recherche Avion ID.Inputs[Lookup Input]"
+              refId="Package\ETL Vols.Paths[Lookup Match Output1]"
+              endId="Package\ETL Vols\Recherche Aeroport arrivee ID.Inputs[Lookup Input]"
               name="Lookup Match Output"
-              startId="Package\ETL Vols\Recherche Aeroport arrivee ID.Outputs[Lookup Match Output]" />
+              startId="Package\ETL Vols\Recherche Aeroport depart ID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL Vols.Paths[Lookup Match Output]"
+              endId="Package\ETL Vols\Union All.Inputs[Union All Input 1]"
+              name="Lookup Match Output"
+              startId="Package\ETL Vols\Recherche Compagnie ID.Outputs[Lookup Match Output]" />
             <path
               refId="Package\ETL Vols.Paths[Merge Join Output]"
               endId="Package\ETL Vols\Upsert.Inputs[Conditional Split Input]"
@@ -8520,25 +8520,29 @@ where [refTable].[NAME] = ?</property>
       <GraphLayout
         Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="152,41.6"
-          Id="Package\ETL Vols\Tri Vols Staging"
-          TopLeft="92.1428573390054,675.905882092867" />
-        <NodeLayout
-          Size="151.2,41.6"
-          Id="Package\ETL Vols\Tri Vols DWH"
-          TopLeft="431.42857234697,676.188234948246" />
-        <NodeLayout
           Size="120,41.6"
           Id="Package\ETL Vols\Union All"
           TopLeft="372.857143650858,220.835293935997" />
         <NodeLayout
-          Size="172,42.4"
-          Id="Package\ETL Vols\Recherche Avion ID"
-          TopLeft="93.9783626047968,421.02563456083" />
+          Size="152,41.6"
+          Id="Package\ETL Vols\Tri Vols Staging"
+          TopLeft="92.1428573390054,675.905882092867" />
         <NodeLayout
-          Size="136,42.4"
-          Id="Package\ETL Vols\Test update"
-          TopLeft="500.781227613334,924.361509028765" />
+          Size="129.6,41.6"
+          Id="Package\ETL Vols\Merge Join"
+          TopLeft="264.285714848309,761.673202527985" />
+        <NodeLayout
+          Size="197.6,41.6"
+          Id="Package\ETL Vols\Recherche Compagnie ID"
+          TopLeft="74.7252724526722,122.564099950668" />
+        <NodeLayout
+          Size="222.4,42.4"
+          Id="Package\ETL Vols\Recherche Aeroport arrivee ID"
+          TopLeft="72.3076901527552,331.538454546378" />
+        <NodeLayout
+          Size="164.8,41.6"
+          Id="Package\ETL Vols\OLE DB Command"
+          TopLeft="680.158731606609,923.490195891493" />
         <NodeLayout
           Size="204,42.4"
           Id="Package\ETL Vols\DWH Destination FaitsVols"
@@ -8556,21 +8560,9 @@ where [refTable].[NAME] = ?</property>
           Id="Package\ETL Vols\Conversion int en string staging"
           TopLeft="61.8939365999718,523.606054914359" />
         <NodeLayout
-          Size="197.6,41.6"
-          Id="Package\ETL Vols\Recherche Compagnie ID"
-          TopLeft="74.7252724526722,122.564099950668" />
-        <NodeLayout
-          Size="222.4,42.4"
-          Id="Package\ETL Vols\Recherche Aeroport arrivee ID"
-          TopLeft="72.3076901527552,331.538454546378" />
-        <NodeLayout
-          Size="108.8,41.6"
-          Id="Package\ETL Vols\Upsert"
-          TopLeft="289.55355831726,861.460762925569" />
-        <NodeLayout
-          Size="144,42.4"
-          Id="Package\ETL Vols\DWH FaitVols"
-          TopLeft="436.507916961061,422.771875981377" />
+          Size="136,42.4"
+          Id="Package\ETL Vols\Test update"
+          TopLeft="500.781227613334,924.361509028765" />
         <NodeLayout
           Size="137.6,42.4"
           Id="Package\ETL Vols\Staging Vols"
@@ -8580,6 +8572,18 @@ where [refTable].[NAME] = ?</property>
           Id="Package\ETL Vols\Recherche Aeroport depart ID"
           TopLeft="69.9999979138374,224.256403837449" />
         <NodeLayout
+          Size="144,42.4"
+          Id="Package\ETL Vols\DWH FaitVols"
+          TopLeft="436.507916961061,422.771875981377" />
+        <NodeLayout
+          Size="108.8,41.6"
+          Id="Package\ETL Vols\Upsert"
+          TopLeft="289.55355831726,861.460762925569" />
+        <NodeLayout
+          Size="172,42.4"
+          Id="Package\ETL Vols\Recherche Avion ID"
+          TopLeft="93.9783626047968,421.02563456083" />
+        <NodeLayout
           Size="218.4,42.4"
           Id="Package\ETL Vols\Conversion int en string DWH"
           TopLeft="399.255934332112,523.715022574774" />
@@ -8587,74 +8591,84 @@ where [refTable].[NAME] = ?</property>
           Size="197.6,42.4"
           Id="Package\ETL Vols\Creation cle unique DWH"
           TopLeft="407.187481797301,600.733314860662" />
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Union All Output 1]"
-          TopLeft="372.857143650858,243.545848886723">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-81.2571457370205,0"
-              Start="0,0"
-              End="-73.7571457370205,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="-73.7571457370205,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[OLE DB Source Output1]"
-          TopLeft="177.113183998025,79.0923062227566">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,43.4717937279114"
-              Start="0,0"
-              End="0,35.9717937279114">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,35.9717937279114" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[OLE DB Source Output]"
-          TopLeft="508.481925646586,465.171875981377">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,58.5431465933968"
-              Start="0,0"
-              End="0,51.0431465933968">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,51.0431465933968" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
+        <NodeLayout
+          Size="151.2,41.6"
+          Id="Package\ETL Vols\Tri Vols DWH"
+          TopLeft="431.42857234697,676.188234948246" />
         <EdgeLayout
           Id="Package\ETL Vols.Paths[Lookup Match Output3]"
+          TopLeft="181.809693045443,374.205121213045">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8205133477853"
+              Start="0,0"
+              End="0,39.3205133477853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3205133477853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.8555691738927,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Lookup Match Output2]"
+          TopLeft="178.269482935718,463.692301227497">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9137536868623"
+              Start="0,0"
+              End="0,52.4137536868623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4137536868623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4021893434312,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Lookup Match Output1]"
+          TopLeft="182.153844033296,266.923070504116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.6153840422623"
+              Start="0,0"
+              End="0,57.1153840422623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.1153840422623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,22.7530045211311,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Lookup Match Output]"
           TopLeft="173.525272452672,164.164099950668">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8686,78 +8700,6 @@ where [refTable].[NAME] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="81.4745488803428,33.3355969926646,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Lookup Match Output2]"
-          TopLeft="181.809693045443,374.205121213045">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.8205133477853"
-              Start="0,0"
-              End="0,39.3205133477853">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.3205133477853" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.8555691738927,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Lookup Match Output1]"
-          TopLeft="178.269482935718,463.692301227497">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9137536868623"
-              Start="0,0"
-              End="0,52.4137536868623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4137536868623" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4021893434312,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Lookup Match Output]"
-          TopLeft="182.153844033296,266.923070504116">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.6153840422623"
-              Start="0,0"
-              End="0,57.1153840422623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.1153840422623" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,22.7530045211311,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -8931,36 +8873,80 @@ where [refTable].[NAME] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\ETL Vols\Merge Join"
-          TopLeft="264.285714848309,761.673202527985" />
         <EdgeLayout
-          Id="Package\ETL Vols.Paths[Sort Output]"
-          TopLeft="168.142857339005,717.505882092867">
+          Id="Package\ETL Vols.Paths[Conditional Split Default Output]"
+          TopLeft="636.781227613334,944.925852460129">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="160.942857509304,44.1673204351184"
+              EndConnector="43.3775039932754,0"
               Start="0,0"
-              End="160.942857509304,36.6673204351184">
+              End="35.8775039932754,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.0836602175592" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,18.0836602175592"
-                    Point2="0,22.0836602175592"
-                    Point3="4,22.0836602175592" />
+                    End="35.8775039932754,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-52.6751542533623,5,141.2278125,11.658203125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Update]"
+          TopLeft="398.35355831726,882.260762925569">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="102.427669296074,63.3007461031959"
+              Start="0,0"
+              End="94.927669296074,63.3007461031959">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
                   <mssgle:LineSegment
-                    End="156.942857509304,22.0836602175592" />
+                    End="47.213834648037,0" />
                   <mssgle:CubicBezierSegment
-                    Point1="156.942857509304,22.0836602175592"
-                    Point2="160.942857509304,22.0836602175592"
-                    Point3="160.942857509304,26.0836602175592" />
+                    Point1="47.213834648037,0"
+                    Point2="51.213834648037,0"
+                    Point3="51.213834648037,4" />
                   <mssgle:LineSegment
-                    End="160.942857509304,36.6673204351184" />
+                    End="51.213834648037,59.3007461031959" />
+                  <mssgle:CubicBezierSegment
+                    Point1="51.213834648037,59.3007461031959"
+                    Point2="51.213834648037,63.3007461031959"
+                    Point3="55.213834648037,63.3007461031959" />
+                  <mssgle:LineSegment
+                    End="94.927669296074,63.3007461031959" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="34.933541679287,-17.609375,32.5605859375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Union All Output 1]"
+          TopLeft="372.857143650858,243.545848886723">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-81.2571457370205,0"
+              Start="0,0"
+              End="-73.7571457370205,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-73.7571457370205,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -9004,6 +8990,84 @@ where [refTable].[NAME] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
+          Id="Package\ETL Vols.Paths[Sort Output]"
+          TopLeft="168.142857339005,717.505882092867">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="160.942857509304,44.1673204351184"
+              Start="0,0"
+              End="160.942857509304,36.6673204351184">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.0836602175592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18.0836602175592"
+                    Point2="0,22.0836602175592"
+                    Point3="4,22.0836602175592" />
+                  <mssgle:LineSegment
+                    End="156.942857509304,22.0836602175592" />
+                  <mssgle:CubicBezierSegment
+                    Point1="156.942857509304,22.0836602175592"
+                    Point2="160.942857509304,22.0836602175592"
+                    Point3="160.942857509304,26.0836602175592" />
+                  <mssgle:LineSegment
+                    End="160.942857509304,36.6673204351184" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[OLE DB Source Output1]"
+          TopLeft="177.113183998025,79.0923062227566">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,43.4717937279114"
+              Start="0,0"
+              End="0,35.9717937279114">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,35.9717937279114" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[OLE DB Source Output]"
+          TopLeft="508.481925646586,465.171875981377">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,58.5431465933968"
+              Start="0,0"
+              End="0,51.0431465933968">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,51.0431465933968" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
           Id="Package\ETL Vols.Paths[Merge Join Output]"
           TopLeft="329.085714848309,803.273202527986">
           <EdgeLayout.Curve>
@@ -9037,70 +9101,6 @@ where [refTable].[NAME] = ?</property>
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Update]"
-          TopLeft="398.35355831726,882.260762925569">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="102.427669296074,63.3007461031959"
-              Start="0,0"
-              End="94.927669296074,63.3007461031959">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="47.213834648037,0" />
-                  <mssgle:CubicBezierSegment
-                    Point1="47.213834648037,0"
-                    Point2="51.213834648037,0"
-                    Point3="51.213834648037,4" />
-                  <mssgle:LineSegment
-                    End="51.213834648037,59.3007461031959" />
-                  <mssgle:CubicBezierSegment
-                    Point1="51.213834648037,59.3007461031959"
-                    Point2="51.213834648037,63.3007461031959"
-                    Point3="55.213834648037,63.3007461031959" />
-                  <mssgle:LineSegment
-                    End="94.927669296074,63.3007461031959" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="34.933541679287,-17.609375,32.5605859375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <NodeLayout
-          Size="164.8,41.6"
-          Id="Package\ETL Vols\OLE DB Command"
-          TopLeft="680.158731606609,923.490195891493" />
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Conditional Split Default Output]"
-          TopLeft="636.781227613334,944.925852460129">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="43.3775039932754,0"
-              Start="0,0"
-              End="35.8775039932754,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="35.8775039932754,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-52.6751542533623,5,141.2278125,11.658203125"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
@@ -9110,7 +9110,7 @@ where [refTable].[NAME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:string">false</Value>
+          type="q2:boolean">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
@@ -9128,7 +9128,7 @@ where [refTable].[NAME] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Vols\DWH FaitVols">
+    design-time-name="Package\ETL Vols\Staging Vols">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -9141,7 +9141,7 @@ where [refTable].[NAME] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Vols\Staging Vols">
+    design-time-name="Package\ETL Vols\DWH FaitVols">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
