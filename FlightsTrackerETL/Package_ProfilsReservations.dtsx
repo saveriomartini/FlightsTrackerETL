@@ -1,0 +1,58 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="12/2/2025 11:11:54 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="WSERVER2024"
+  DTS:CreatorName="WSERVER2024\enginesadmin"
+  DTS:DTSID="{30D37D25-7963-4C3C-BE72-AA4C18852389}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5556.0"
+  DTS:LocaleID="8192"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="1"
+  DTS:VersionGUID="{4685C7EF-F82F-4995-870E-07D6C42469B9}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\INSERT Profiles Reservations DWH"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{8D749213-89F8-43E1-BD72-10F92470AD41}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="INSERT Profiles Reservations DWH"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{F765F8F3-E298-456C-93D8-14DD8199CEFF}"
+          SQLTask:SqlStatementSource="IF NOT EXISTS (SELECT 1 FROM [dbo].[DimProfileReservation])&#xA;BEGIN&#xA;&#xA;-- Insertion de toutes les combinaisons possibles (48 lignes)&#xA;INSERT INTO [dbo].[DimProfileReservation] &#xA;(&#xA;    [SALES_CHANNEL],&#xA;    [TRIP_TYPE], &#xA;    [WANTS_EXTRA_BAGGAGE], &#xA;    [WANTS_PREFERRED_SEAT], &#xA;    [WANTS_IN_FLIGHT_MEALS]&#xA;)&#xA;SELECT &#xA;    Channel.Name,&#xA;    Trip.Name,&#xA;    Bag.Flag,&#xA;    Seat.Flag,&#xA;    Meal.Flag&#xA;FROM &#xA;    -- Set 1 : Canal de Vente (Valeurs trouvées dans ton Staging)&#xA;    (VALUES ('Internet'), ('Mobile')) AS Channel(Name)&#xA;CROSS JOIN &#xA;    -- Set 2 : Type de Voyage&#xA;    (VALUES ('CircleTrip'), ('OneWay'), ('RoundTrip')) AS Trip(Name)&#xA;CROSS JOIN &#xA;    -- Set 3 : Bagage (0 ou 1)&#xA;    (VALUES (0), (1)) AS Bag(Flag)&#xA;CROSS JOIN &#xA;    -- Set 4 : Siège (0 ou 1)&#xA;    (VALUES (0), (1)) AS Seat(Flag)&#xA;CROSS JOIN &#xA;    -- Set 5 : Repas (0 ou 1)&#xA;    (VALUES (0), (1)) AS Meal(Flag);&#xA;END" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="242.4,41.6"
+          Id="Package\INSERT Profiles Reservations DWH"
+          TopLeft="182.857143246398,120.058823424176" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

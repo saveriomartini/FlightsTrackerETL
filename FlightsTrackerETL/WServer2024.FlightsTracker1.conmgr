@@ -1,0 +1,12 @@
+﻿<?xml version="1.0"?>
+<DTS:ConnectionManager xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:ObjectName="WServer2024.FlightsTracker1"
+  DTS:DTSID="{F765F8F3-E298-456C-93D8-14DD8199CEFF}"
+  DTS:CreationName="OLEDB">
+  <DTS:ObjectData>
+    <DTS:ConnectionManager
+      DTS:ConnectRetryCount="1"
+      DTS:ConnectRetryInterval="5"
+      DTS:ConnectionString="Data Source=WServer2024;Initial Catalog=FlightsTracker;Provider=SQLOLEDB.1;Integrated Security=SSPI;Auto Translate=False;Application Name=SSIS-FlightsTrackerETL-{F765F8F3-E298-456C-93D8-14DD8199CEFF}WServer2024.FlightsTracker1;" />
+  </DTS:ObjectData>
+</DTS:ConnectionManager>
