@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package_Vols"
   DTS:PackageType="5"
-  DTS:VersionBuild="136"
-  DTS:VersionGUID="{13325047-C8B3-49F2-960A-15511AF03657}">
+  DTS:VersionBuild="139"
+  DTS:VersionGUID="{BD2DB170-C89B-49D1-9636-EB37CE751624}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAC/Zl1JKzRGkrf82mmXa5FD6xAt2Q0z8akS2H1VzFOtjQAAAAAOgAAAAAIAACAAAAC/8CJRn9lZ03x4n8YlJZvUkqSlg48UW+gjmzuis7//0iAAAACvLRGYh3/9jPQ86+GV1DM9GSq2s1FaBZAmjtTcIdetBkAAAACJhGgj0aR177Tr6YJLFdb46L+xqEpXN+TVbqyk5ttI+OdVB2T7xllvpNxL6d5rQsAi0Rxr4Mj2Dw0a2NrpvOgW</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB+B1wBrnahSig+p5PeiNTrj1IzTh/V+tyZggpsu19bXwAAAAAOgAAAAAIAACAAAAD4wlsX3FcNq1bmcz+yoPDtJy/Tx3zawLlBLIYUwBoNqCAAAABmzfQvrCkDBdBFEJVmxaUH5f0/xEtAZFXuknflJyuXzEAAAAAmnEfgROrxEDoMgU+dPQA6k53pniZMsk6TUGn+I/n9XGgVBQUstpEw/JZIuxtM2pRoM0emSZR2U9/xe29MVoQn</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8344,13 +8344,13 @@ where [refTable].[NAME] = ?</property>
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\TRUNCATE TABLE staging vols"
+      DTS:refId="Package\TRUNCATE TABLE Staging Vols"
       DTS:CreationName="Microsoft.ExecuteSQLTask"
       DTS:Description="Tâche d'exécution de requêtes SQL"
       DTS:DTSID="{819F90EC-3220-4941-A847-0BBB3A498386}"
       DTS:ExecutableType="Microsoft.ExecuteSQLTask"
       DTS:LocaleID="-1"
-      DTS:ObjectName="TRUNCATE TABLE staging vols"
+      DTS:ObjectName="TRUNCATE TABLE Staging Vols"
       DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
       DTS:ThreadHint="0">
       <DTS:Variables />
@@ -8366,7 +8366,7 @@ where [refTable].[NAME] = ?</property>
       DTS:refId="Package.PrecedenceConstraints[Contrainte]"
       DTS:CreationName=""
       DTS:DTSID="{C9A7FDA2-160B-4724-9F41-5CA0AE4C6B41}"
-      DTS:From="Package\TRUNCATE TABLE staging vols"
+      DTS:From="Package\TRUNCATE TABLE Staging Vols"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Contrainte"
       DTS:To="Package\Chargement Staging Vols" />
@@ -8400,23 +8400,23 @@ where [refTable].[NAME] = ?</property>
           Id="Package\ETL Vols"
           TopLeft="169.711530874842,217.499989628792" />
         <NodeLayout
-          Size="223.2,41.6"
-          Id="Package\TRUNCATE TABLE staging vols"
-          TopLeft="106.839281217518,44.538233647392" />
+          Size="225.6,41.6"
+          Id="Package\TRUNCATE TABLE Staging Vols"
+          TopLeft="113.98213837558,33.0676454221523" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Contrainte]"
-          TopLeft="221.944637786852,86.138233647392">
+          TopLeft="226.116066365883,74.6676454221523">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,34.111760618641"
+              EndConnector="0,45.5823488438807"
               Start="0,0"
-              End="0,26.611760618641">
+              End="0,38.0823488438807">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,26.611760618641" />
+                    End="0,38.0823488438807" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -8456,13 +8456,13 @@ where [refTable].[NAME] = ?</property>
       <GraphLayout
         Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="126.4,42.4"
-          Id="Package\Chargement Staging Vols\OLTP Vols"
-          TopLeft="144.755044279865,66.5112597292468" />
-        <NodeLayout
           Size="135.2,41.6"
           Id="Package\Chargement Staging Vols\Staging vols"
           TopLeft="139.318175590174,162.55908315767" />
+        <NodeLayout
+          Size="126.4,42.4"
+          Id="Package\Chargement Staging Vols\OLTP Vols"
+          TopLeft="144.755044279865,66.5112597292468" />
         <EdgeLayout
           Id="Package\Chargement Staging Vols.Paths[OLE DB Source Output]"
           TopLeft="207.436609935019,108.911259729247">
@@ -8699,7 +8699,7 @@ where [refTable].[NAME] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="81.4745488803428,33.3355969926646,96.3827734375,11.609375"
+              BoundingBox="81.474548880343,33.3355969926646,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
