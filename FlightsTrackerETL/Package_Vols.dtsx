@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package_Vols"
   DTS:PackageType="5"
-  DTS:VersionBuild="139"
-  DTS:VersionGUID="{BD2DB170-C89B-49D1-9636-EB37CE751624}">
+  DTS:VersionBuild="141"
+  DTS:VersionGUID="{B00A2E92-1E39-4302-BE80-50781659C303}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB+B1wBrnahSig+p5PeiNTrj1IzTh/V+tyZggpsu19bXwAAAAAOgAAAAAIAACAAAAD4wlsX3FcNq1bmcz+yoPDtJy/Tx3zawLlBLIYUwBoNqCAAAABmzfQvrCkDBdBFEJVmxaUH5f0/xEtAZFXuknflJyuXzEAAAAAmnEfgROrxEDoMgU+dPQA6k53pniZMsk6TUGn+I/n9XGgVBQUstpEw/JZIuxtM2pRoM0emSZR2U9/xe29MVoQn</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAfwCs8jM3nPdB16AL2veXPv4qQTZzPaTllumHWLyoBNQAAAAAOgAAAAAIAACAAAADn1mPqpz1E/n3nsRHPpz0keGY0t6Vwfj68x/o07smATyAAAADGWrVEGSoTvj4J4xFpkFX28qiPD6EHkHof++ZgH3bjukAAAAChEc5lmXbls19xfQkLjn5i+ys0JiJ0PdaOJusLYq+0bxSwSWN08bnb2EAZTGCMANvsZfCJLUTpnMsWGTCAGLSy</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -8286,24 +8286,24 @@ where [refTable].[NAME] = ?</property>
               startId="Package\ETL Vols\Recherche Compagnie ID.Outputs[Lookup Error Output]" />
             <path
               refId="Package\ETL Vols.Paths[Lookup Match Output3]"
-              endId="Package\ETL Vols\Recherche Avion ID.Inputs[Lookup Input]"
+              endId="Package\ETL Vols\Union All.Inputs[Union All Input 1]"
               name="Lookup Match Output"
-              startId="Package\ETL Vols\Recherche Aeroport arrivee ID.Outputs[Lookup Match Output]" />
+              startId="Package\ETL Vols\Recherche Compagnie ID.Outputs[Lookup Match Output]" />
             <path
               refId="Package\ETL Vols.Paths[Lookup Match Output2]"
-              endId="Package\ETL Vols\Conversion int en string staging.Inputs[Data Conversion Input]"
-              name="Lookup Match Output"
-              startId="Package\ETL Vols\Recherche Avion ID.Outputs[Lookup Match Output]" />
-            <path
-              refId="Package\ETL Vols.Paths[Lookup Match Output1]"
               endId="Package\ETL Vols\Recherche Aeroport arrivee ID.Inputs[Lookup Input]"
               name="Lookup Match Output"
               startId="Package\ETL Vols\Recherche Aeroport depart ID.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\ETL Vols.Paths[Lookup Match Output]"
-              endId="Package\ETL Vols\Union All.Inputs[Union All Input 1]"
+              refId="Package\ETL Vols.Paths[Lookup Match Output1]"
+              endId="Package\ETL Vols\Conversion int en string staging.Inputs[Data Conversion Input]"
               name="Lookup Match Output"
-              startId="Package\ETL Vols\Recherche Compagnie ID.Outputs[Lookup Match Output]" />
+              startId="Package\ETL Vols\Recherche Avion ID.Outputs[Lookup Match Output]" />
+            <path
+              refId="Package\ETL Vols.Paths[Lookup Match Output]"
+              endId="Package\ETL Vols\Recherche Avion ID.Inputs[Lookup Input]"
+              name="Lookup Match Output"
+              startId="Package\ETL Vols\Recherche Aeroport arrivee ID.Outputs[Lookup Match Output]" />
             <path
               refId="Package\ETL Vols.Paths[Merge Join Output]"
               endId="Package\ETL Vols\Upsert.Inputs[Conditional Split Input]"
@@ -8597,78 +8597,6 @@ where [refTable].[NAME] = ?</property>
           TopLeft="431.42857234697,676.188234948246" />
         <EdgeLayout
           Id="Package\ETL Vols.Paths[Lookup Match Output3]"
-          TopLeft="181.809693045443,374.205121213045">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,46.8205133477853"
-              Start="0,0"
-              End="0,39.3205133477853">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,39.3205133477853" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,13.8555691738927,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Lookup Match Output2]"
-          TopLeft="178.269482935718,463.692301227497">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,59.9137536868623"
-              Start="0,0"
-              End="0,52.4137536868623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.4137536868623" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,20.4021893434312,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Lookup Match Output1]"
-          TopLeft="182.153844033296,266.923070504116">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,64.6153840422623"
-              Start="0,0"
-              End="0,57.1153840422623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,57.1153840422623" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,22.7530045211311,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Vols.Paths[Lookup Match Output]"
           TopLeft="173.525272452672,164.164099950668">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8700,6 +8628,78 @@ where [refTable].[NAME] = ?</property>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
               BoundingBox="81.474548880343,33.3355969926646,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Lookup Match Output2]"
+          TopLeft="182.153844033296,266.923070504116">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,64.6153840422623"
+              Start="0,0"
+              End="0,57.1153840422623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,57.1153840422623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,22.7530045211311,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Lookup Match Output1]"
+          TopLeft="178.269482935718,463.692301227497">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,59.9137536868623"
+              Start="0,0"
+              End="0,52.4137536868623">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.4137536868623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,20.4021893434312,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Vols.Paths[Lookup Match Output]"
+          TopLeft="181.809693045443,374.205121213045">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,46.8205133477853"
+              Start="0,0"
+              End="0,39.3205133477853">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,39.3205133477853" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,13.8555691738927,96.3827734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -9110,7 +9110,7 @@ where [refTable].[NAME] = ?</property>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>
         <Value
-          type="q2:boolean">false</Value>
+          type="q2:string">false</Value>
       </Property>
       <Property>
         <Name>UsedTableName</Name>
