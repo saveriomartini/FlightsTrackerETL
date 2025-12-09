@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package_Avions"
   DTS:PackageType="5"
-  DTS:VersionBuild="38"
-  DTS:VersionGUID="{24F7C206-D4E1-4C9E-B03B-2CF6FE263A68}">
+  DTS:VersionBuild="39"
+  DTS:VersionGUID="{9D68D75C-63AE-4645-9613-73CD6836E40B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAA4QBtfktbjzginTh2uOmNPr8ORoIAYfPHu4n7Q/jkllAAAAAAOgAAAAAIAACAAAAAIEeV7OGyHu0aDHf9DAT+zL/hlX3Q+mIhaknnFwLwsKiAAAABAQY2AN+UVePcg5ynObYi7gzJcQNjKCKHFB5V5yUslGEAAAAATf354ns8RpEXLH8R1kOLNWiYg78RhBh8mg2i0oIE2Ztwfmf6a3r0fNEt1T8EgGZPg2lFIjYZyqmZjGPZq1gGP</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAACxOqmnqZwM75uoyEKJUFip6E5LJ1LHzUevdphvN6lVlAAAAAAOgAAAAAIAACAAAAAGVeLRDQpp8FzVfEONxlg+Qik0buDGd1NH95eSnim6byAAAAAW3jYgWL3tvu2/PVL4tkB/O77DHjDtntWnbU6cSDbYiUAAAADNO2zRD22/3yFF7WvnPRcn6kKvWXgh/JbN9doijNYHoiOr4/va4CzcqZF2hANGpEeiRR08uoZga0hN1Pe8+fKZ</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -435,13 +435,13 @@
       </DTS:ObjectData>
     </DTS:Executable>
     <DTS:Executable
-      DTS:refId="Package\Data Flow Task"
+      DTS:refId="Package\ETL Avions"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
       DTS:DTSID="{2BB7C163-F1F9-4574-A9EF-DCE5E9BC8F78}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
-      DTS:ObjectName="Data Flow Task"
+      DTS:ObjectName="ETL Avions"
       DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
       <DTS:Variables />
       <DTS:ObjectData>
@@ -449,7 +449,7 @@
           version="1">
           <components>
             <component
-              refId="Package\Data Flow Task\Avions Staging"
+              refId="Package\ETL Avions\Avions Staging"
               componentClassID="Microsoft.OLEDBSource"
               contactInfo="OLE DB Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;7"
               description="OLE DB Source"
@@ -498,7 +498,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Avions Staging.Connections[OleDbConnection]"
+                  refId="Package\ETL Avions\Avions Staging.Connections[OleDbConnection]"
                   connectionManagerID="{CD9921F5-F422-4DA1-99C2-46C96D1944B2}:external"
                   connectionManagerRefId="Project.ConnectionManagers[WServer2024.FlightsTrackerStaging]"
                   description="The OLE DB runtime connection used to access the database."
@@ -506,135 +506,135 @@
               </connections>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output]"
+                  refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output]"
                   name="OLE DB Source Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[YEAR_OF_CONSTRUCTION]"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      externalMetadataColumnId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[YEAR_OF_CONSTRUCTION]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       name="YEAR_OF_CONSTRUCTION_STG"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[TAIL_NUMBER]"
+                      externalMetadataColumnId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[TAIL_NUMBER]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]"
                       name="TAIL_NUMBER_STG"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[MODEL]"
+                      externalMetadataColumnId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[MODEL]"
                       length="255"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]"
                       name="MODEL_STG"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SEATS]"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]"
+                      externalMetadataColumnId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SEATS]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]"
                       name="SEATS_STG"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]"
                       dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SPEED]"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]"
+                      externalMetadataColumnId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SPEED]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]"
                       name="SPEED_STG"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[ID]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[YEAR_OF_CONSTRUCTION]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[YEAR_OF_CONSTRUCTION]"
                       dataType="i4"
                       name="YEAR_OF_CONSTRUCTION" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[TAIL_NUMBER]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[TAIL_NUMBER]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="TAIL_NUMBER" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[MODEL]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[MODEL]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="MODEL" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SEATS]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SEATS]"
                       dataType="i4"
                       name="SEATS" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SPEED]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].ExternalColumns[SPEED]"
                       dataType="i4"
                       name="SPEED" />
                   </externalMetadataColumns>
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output]"
+                  refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output]"
                   isErrorOut="true"
                   name="OLE DB Source Error Output">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[YEAR_OF_CONSTRUCTION]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[YEAR_OF_CONSTRUCTION]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[YEAR_OF_CONSTRUCTION]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[YEAR_OF_CONSTRUCTION]"
                       name="YEAR_OF_CONSTRUCTION" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[TAIL_NUMBER]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[TAIL_NUMBER]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[TAIL_NUMBER]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[TAIL_NUMBER]"
                       name="TAIL_NUMBER" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[MODEL]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[MODEL]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[MODEL]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[MODEL]"
                       name="MODEL" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SEATS]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SEATS]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SEATS]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SEATS]"
                       name="SEATS" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SPEED]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SPEED]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SPEED]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[SPEED]"
                       name="SPEED" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -643,7 +643,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Derived Column"
+              refId="Package\ETL Avions\Derived Column"
               componentClassID="Microsoft.DerivedColumn"
               contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
@@ -651,7 +651,7 @@
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  refId="Package\ETL Avions\Derived Column.Inputs[Derived Column Input]"
                   description="Input to the Derived Column Transformation"
                   name="Derived Column Input">
                   <externalMetadataColumns />
@@ -659,18 +659,18 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                  refId="Package\ETL Avions\Derived Column.Outputs[Derived Column Output]"
                   description="Default Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   name="Derived Column Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\ETL Avions\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ID_DWH]"
+                      refId="Package\ETL Avions\Derived Column.Outputs[Derived Column Output].Columns[ID_DWH]"
                       dataType="i4"
                       errorOrTruncationOperation="Computation"
                       errorRowDisposition="FailComponent"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ID_DWH]"
+                      lineageId="Package\ETL Avions\Derived Column.Outputs[Derived Column Output].Columns[ID_DWH]"
                       name="ID_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -691,23 +691,23 @@
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                  refId="Package\ETL Avions\Derived Column.Outputs[Derived Column Error Output]"
                   description="Error Output of the Derived Column Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Derived Column Error Output"
-                  synchronousInputId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                  synchronousInputId="Package\ETL Avions\Derived Column.Inputs[Derived Column Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Avions\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Avions\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Avions\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Avions\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -716,7 +716,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\OLE DB Destination"
+              refId="Package\ETL Avions\OLE DB Destination"
               componentClassID="Microsoft.OLEDBDestination"
               contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
               description="OLE DB Destination"
@@ -773,7 +773,7 @@
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                  refId="Package\ETL Avions\OLE DB Destination.Connections[OleDbConnection]"
                   connectionManagerID="{F765F8F3-E298-456C-93D8-14DD8199CEFF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[WServer2024.FlightsTracker1]"
                   description="The OLE DB runtime connection used to access the database."
@@ -781,75 +781,75 @@
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input]"
                   errorOrTruncationOperation="Insert"
                   errorRowDisposition="FailComponent"
                   hasSideEffects="true"
                   name="OLE DB Destination Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       cachedDataType="i4"
                       cachedName="YEAR_OF_CONSTRUCTION_STG"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_OF_CONSTRUCTION]"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]" />
+                      externalMetadataColumnId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_OF_CONSTRUCTION]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[TAIL_NUMBER_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_STG"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TAIL_NUMBER]"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]" />
+                      externalMetadataColumnId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TAIL_NUMBER]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MODEL_STG]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[MODEL_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="MODEL_STG"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MODEL]"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]" />
+                      externalMetadataColumnId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MODEL]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SEATS_STG]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SEATS_STG]"
                       cachedDataType="i4"
                       cachedName="SEATS_STG"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEATS]"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]" />
+                      externalMetadataColumnId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEATS]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SPEED_STG]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[SPEED_STG]"
                       cachedDataType="i4"
                       cachedName="SPEED_STG"
-                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPEED]"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]" />
+                      externalMetadataColumnId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPEED]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ID]"
                       dataType="i4"
                       name="ID" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_OF_CONSTRUCTION]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[YEAR_OF_CONSTRUCTION]"
                       dataType="i4"
                       name="YEAR_OF_CONSTRUCTION" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TAIL_NUMBER]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[TAIL_NUMBER]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="TAIL_NUMBER" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MODEL]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[MODEL]"
                       codePage="1252"
                       dataType="str"
                       length="255"
                       name="MODEL" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEATS]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SEATS]"
                       dataType="i4"
                       name="SEATS" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPEED]"
+                      refId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SPEED]"
                       dataType="i4"
                       name="SPEED" />
                   </externalMetadataColumns>
@@ -857,22 +857,22 @@
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  refId="Package\ETL Avions\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="OLE DB Destination Error Output"
-                  synchronousInputId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  synchronousInputId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Avions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Avions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Avions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Avions\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -881,7 +881,7 @@
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Recherche Num Avion"
+              refId="Package\ETL Avions\Recherche Num Avion"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
               description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
@@ -937,7 +937,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                   containsID="true"
                   dataType="System.String"
                   description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                  name="ParameterMap">#{Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]};</property>
+                  name="ParameterMap">#{Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]};</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -949,7 +949,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </properties>
               <connections>
                 <connection
-                  refId="Package\Data Flow Task\Recherche Num Avion.Connections[OleDbConnection]"
+                  refId="Package\ETL Avions\Recherche Num Avion.Connections[OleDbConnection]"
                   connectionManagerID="{F765F8F3-E298-456C-93D8-14DD8199CEFF}:external"
                   connectionManagerRefId="Project.ConnectionManagers[WServer2024.FlightsTracker1]"
                   description="Connection manager used to access lookup data."
@@ -957,16 +957,16 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </connections>
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Recherche Num Avion.Inputs[Lookup Input]"
+                  refId="Package\ETL Avions\Recherche Num Avion.Inputs[Lookup Input]"
                   name="Lookup Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Inputs[Lookup Input].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Inputs[Lookup Input].Columns[TAIL_NUMBER_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]">
                       <properties>
                         <property
                           dataType="System.String"
@@ -984,18 +984,18 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output]"
+                  refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output]"
                   errorOrTruncationOperation="Lookup"
                   errorRowDisposition="RedirectRow"
                   exclusionGroup="1"
                   name="Lookup Match Output"
-                  synchronousInputId="Package\Data Flow Task\Recherche Num Avion.Inputs[Lookup Input]">
+                  synchronousInputId="Package\ETL Avions\Recherche Num Avion.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[ID_DWH]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[ID_DWH]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[ID_DWH]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[ID_DWH]"
                       name="ID_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1006,10 +1006,10 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[YEAR_OF_CONSTRUCTION_DWH]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[YEAR_OF_CONSTRUCTION_DWH]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[YEAR_OF_CONSTRUCTION_DWH]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[YEAR_OF_CONSTRUCTION_DWH]"
                       name="YEAR_OF_CONSTRUCTION_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1020,12 +1020,12 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[TAIL_NUMBER_DWH]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[TAIL_NUMBER_DWH]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="255"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[TAIL_NUMBER_DWH]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[TAIL_NUMBER_DWH]"
                       name="TAIL_NUMBER_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1036,12 +1036,12 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[MODEL_DWH]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[MODEL_DWH]"
                       codePage="1252"
                       dataType="str"
                       errorOrTruncationOperation="Copy Column"
                       length="255"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[MODEL_DWH]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[MODEL_DWH]"
                       name="MODEL_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1052,10 +1052,10 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SEATS_DWH]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SEATS_DWH]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SEATS_DWH]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SEATS_DWH]"
                       name="SEATS_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1066,10 +1066,10 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SPEED_DWH]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SPEED_DWH]"
                       dataType="i4"
                       errorOrTruncationOperation="Copy Column"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SPEED_DWH]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SPEED_DWH]"
                       name="SPEED_DWH"
                       truncationRowDisposition="FailComponent">
                       <properties>
@@ -1083,30 +1083,30 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup No Match Output]"
+                  refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup No Match Output]"
                   description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
                   exclusionGroup="1"
                   name="Lookup No Match Output"
-                  synchronousInputId="Package\Data Flow Task\Recherche Num Avion.Inputs[Lookup Input]">
+                  synchronousInputId="Package\ETL Avions\Recherche Num Avion.Inputs[Lookup Input]">
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Error Output]"
+                  refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Error Output]"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Lookup Error Output"
-                  synchronousInputId="Package\Data Flow Task\Recherche Num Avion.Inputs[Lookup Input]">
+                  synchronousInputId="Package\ETL Avions\Recherche Num Avion.Inputs[Lookup Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1115,7 +1115,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Test Update"
+              refId="Package\ETL Avions\Test Update"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
@@ -1123,7 +1123,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Test Update.Inputs[Conditional Split Input]"
+                  refId="Package\ETL Avions\Test Update.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <externalMetadataColumns />
@@ -1131,11 +1131,11 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Test Update.Outputs[Conditional Split Default Output]"
+                  refId="Package\ETL Avions\Test Update.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow Task\Test Update.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\ETL Avions\Test Update.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -1144,23 +1144,23 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Test Update.Outputs[Conditional Split Error Output]"
+                  refId="Package\ETL Avions\Test Update.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task\Test Update.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\ETL Avions\Test Update.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Avions\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Avions\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Avions\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Avions\Test Update.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1169,7 +1169,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Union All"
+              refId="Package\ETL Avions\Union All"
               componentClassID="Microsoft.UnionAll"
               contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
               description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
@@ -1177,255 +1177,255 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               version="1">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+                  refId="Package\ETL Avions\Union All.Inputs[Union All Input 1]"
                   name="Union All Input 1">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       cachedDataType="i4"
                       cachedName="YEAR_OF_CONSTRUCTION_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[TAIL_NUMBER_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[MODEL_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[MODEL_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="MODEL_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[SEATS_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[SEATS_STG]"
                       cachedDataType="i4"
                       cachedName="SEATS_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[SPEED_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[SPEED_STG]"
                       cachedDataType="i4"
                       cachedName="SPEED_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[ID_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[ID_DWH]"
                       cachedDataType="i4"
                       cachedName="ID_DWH"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[ID_DWH]">
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[ID_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[ID_DWH]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[YEAR_OF_CONSTRUCTION_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[YEAR_OF_CONSTRUCTION_DWH]"
                       cachedDataType="i4"
                       cachedName="YEAR_OF_CONSTRUCTION_DWH"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[YEAR_OF_CONSTRUCTION_DWH]">
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[YEAR_OF_CONSTRUCTION_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_DWH]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[TAIL_NUMBER_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[TAIL_NUMBER_DWH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_DWH"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[TAIL_NUMBER_DWH]">
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[TAIL_NUMBER_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[MODEL_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[MODEL_DWH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="MODEL_DWH"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[MODEL_DWH]">
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[MODEL_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_DWH]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[SEATS_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[SEATS_DWH]"
                       cachedDataType="i4"
                       cachedName="SEATS_DWH"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SEATS_DWH]">
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SEATS_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_DWH]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[SPEED_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 1].Columns[SPEED_DWH]"
                       cachedDataType="i4"
                       cachedName="SPEED_DWH"
-                      lineageId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SPEED_DWH]">
+                      lineageId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output].Columns[SPEED_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_DWH]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+                  refId="Package\ETL Avions\Union All.Inputs[Union All Input 2]"
                   hasSideEffects="true"
                   name="Union All Input 2">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 2].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       cachedDataType="i4"
                       cachedName="YEAR_OF_CONSTRUCTION_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[YEAR_OF_CONSTRUCTION_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 2].Columns[TAIL_NUMBER_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[TAIL_NUMBER_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[MODEL_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 2].Columns[MODEL_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="MODEL_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[MODEL_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[SEATS_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 2].Columns[SEATS_STG]"
                       cachedDataType="i4"
                       cachedName="SEATS_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SEATS_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[SPEED_STG]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 2].Columns[SPEED_STG]"
                       cachedDataType="i4"
                       cachedName="SPEED_STG"
-                      lineageId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]">
+                      lineageId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output].Columns[SPEED_STG]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]}</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[ID_DWH]"
+                      refId="Package\ETL Avions\Union All.Inputs[Union All Input 2].Columns[ID_DWH]"
                       cachedDataType="i4"
                       cachedName="ID_DWH"
-                      lineageId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[ID_DWH]">
+                      lineageId="Package\ETL Avions\Derived Column.Outputs[Derived Column Output].Columns[ID_DWH]">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Output column lineage ID"
-                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID_DWH]}</property>
+                          name="OutputColumnLineageID">#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[ID_DWH]}</property>
                       </properties>
                     </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
                 <input
-                  refId="Package\Data Flow Task\Union All.Inputs[Union All Input 3]"
+                  refId="Package\ETL Avions\Union All.Inputs[Union All Input 3]"
                   dangling="true"
                   hasSideEffects="true"
                   name="Union All Input 3">
@@ -1434,71 +1434,71 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]"
+                  refId="Package\ETL Avions\Union All.Outputs[Union All Output 1]"
                   name="Union All Output 1">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_STG]"
                       name="YEAR_OF_CONSTRUCTION_STG" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]"
                       name="TAIL_NUMBER_STG" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_STG]"
                       name="MODEL_STG" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_STG]"
                       name="SEATS_STG" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_STG]"
                       name="SPEED_STG" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID_DWH]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[ID_DWH]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[ID_DWH]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[ID_DWH]"
                       name="ID_DWH" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_DWH]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_DWH]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_DWH]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[YEAR_OF_CONSTRUCTION_DWH]"
                       name="YEAR_OF_CONSTRUCTION_DWH" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]"
                       name="TAIL_NUMBER_DWH" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_DWH]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_DWH]"
                       codePage="1252"
                       dataType="str"
                       length="255"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[MODEL_DWH]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[MODEL_DWH]"
                       name="MODEL_DWH" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_DWH]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_DWH]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SEATS_DWH]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SEATS_DWH]"
                       name="SEATS_DWH" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_DWH]"
+                      refId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_DWH]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[SPEED_DWH]"
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[SPEED_DWH]"
                       name="SPEED_DWH" />
                   </outputColumns>
                   <externalMetadataColumns />
@@ -1506,7 +1506,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               </outputs>
             </component>
             <component
-              refId="Package\Data Flow Task\Upsert"
+              refId="Package\ETL Avions\Upsert"
               componentClassID="Microsoft.ConditionalSplit"
               contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
               description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
@@ -1514,44 +1514,44 @@ where [refTable].[TAIL_NUMBER] = ?</property>
               usesDispositions="true">
               <inputs>
                 <input
-                  refId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input]"
+                  refId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input]"
                   description="Input to the Conditional Split Transformation"
                   name="Conditional Split Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input].Columns[TAIL_NUMBER_STG]"
+                      refId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input].Columns[TAIL_NUMBER_STG]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_STG"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]" />
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input].Columns[TAIL_NUMBER_DWH]"
+                      refId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input].Columns[TAIL_NUMBER_DWH]"
                       cachedCodepage="1252"
                       cachedDataType="str"
                       cachedLength="255"
                       cachedName="TAIL_NUMBER_DWH"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]" />
+                      lineageId="Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
               </inputs>
               <outputs>
                 <output
-                  refId="Package\Data Flow Task\Upsert.Outputs[Insert]"
+                  refId="Package\ETL Avions\Upsert.Outputs[Insert]"
                   description="Output 1 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Insert"
-                  synchronousInputId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input]"
+                  synchronousInputId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}) &amp;&amp; [ISNULL](#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]})</property>
+                      name="Expression">![ISNULL](#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}) &amp;&amp; [ISNULL](#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -1566,20 +1566,20 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Upsert.Outputs[Update]"
+                  refId="Package\ETL Avions\Upsert.Outputs[Update]"
                   description="Output 2 of the Conditional Split Transformation"
                   errorOrTruncationOperation="Computation"
                   errorRowDisposition="FailComponent"
                   exclusionGroup="1"
                   name="Update"
-                  synchronousInputId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input]"
+                  synchronousInputId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input]"
                   truncationRowDisposition="FailComponent">
                   <properties>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}) &amp;&amp; ![ISNULL](#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]})</property>
+                      name="Expression">![ISNULL](#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_STG]}) &amp;&amp; ![ISNULL](#{Package\ETL Avions\Union All.Outputs[Union All Output 1].Columns[TAIL_NUMBER_DWH]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
@@ -1594,11 +1594,11 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Upsert.Outputs[Conditional Split Default Output]"
+                  refId="Package\ETL Avions\Upsert.Outputs[Conditional Split Default Output]"
                   description="Default Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   name="Conditional Split Default Output"
-                  synchronousInputId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input]">
                   <properties>
                     <property
                       dataType="System.Boolean"
@@ -1607,23 +1607,23 @@ where [refTable].[TAIL_NUMBER] = ?</property>
                   <externalMetadataColumns />
                 </output>
                 <output
-                  refId="Package\Data Flow Task\Upsert.Outputs[Conditional Split Error Output]"
+                  refId="Package\ETL Avions\Upsert.Outputs[Conditional Split Error Output]"
                   description="Error Output of the Conditional Split Transformation"
                   exclusionGroup="1"
                   isErrorOut="true"
                   name="Conditional Split Error Output"
-                  synchronousInputId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input]">
+                  synchronousInputId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input]">
                   <outputColumns>
                     <outputColumn
-                      refId="Package\Data Flow Task\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      refId="Package\ETL Avions\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      lineageId="Package\ETL Avions\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
                       name="ErrorCode"
                       specialFlags="1" />
                     <outputColumn
-                      refId="Package\Data Flow Task\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      refId="Package\ETL Avions\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       dataType="i4"
-                      lineageId="Package\Data Flow Task\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      lineageId="Package\ETL Avions\Upsert.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
                       name="ErrorColumn"
                       specialFlags="2" />
                   </outputColumns>
@@ -1634,40 +1634,40 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </components>
           <paths>
             <path
-              refId="Package\Data Flow Task.Paths[Derived Column Output]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 2]"
+              refId="Package\ETL Avions.Paths[Derived Column Output]"
+              endId="Package\ETL Avions\Union All.Inputs[Union All Input 2]"
               name="Derived Column Output"
-              startId="Package\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+              startId="Package\ETL Avions\Derived Column.Outputs[Derived Column Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Insert]"
-              endId="Package\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              refId="Package\ETL Avions.Paths[Insert]"
+              endId="Package\ETL Avions\OLE DB Destination.Inputs[OLE DB Destination Input]"
               name="Insert"
-              startId="Package\Data Flow Task\Upsert.Outputs[Insert]" />
+              startId="Package\ETL Avions\Upsert.Outputs[Insert]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Error Output]"
-              endId="Package\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+              refId="Package\ETL Avions.Paths[Lookup Error Output]"
+              endId="Package\ETL Avions\Derived Column.Inputs[Derived Column Input]"
               name="Lookup Error Output"
-              startId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Error Output]" />
+              startId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Error Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Lookup Match Output]"
-              endId="Package\Data Flow Task\Union All.Inputs[Union All Input 1]"
+              refId="Package\ETL Avions.Paths[Lookup Match Output]"
+              endId="Package\ETL Avions\Union All.Inputs[Union All Input 1]"
               name="Lookup Match Output"
-              startId="Package\Data Flow Task\Recherche Num Avion.Outputs[Lookup Match Output]" />
+              startId="Package\ETL Avions\Recherche Num Avion.Outputs[Lookup Match Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[OLE DB Source Output]"
-              endId="Package\Data Flow Task\Recherche Num Avion.Inputs[Lookup Input]"
+              refId="Package\ETL Avions.Paths[OLE DB Source Output]"
+              endId="Package\ETL Avions\Recherche Num Avion.Inputs[Lookup Input]"
               name="OLE DB Source Output"
-              startId="Package\Data Flow Task\Avions Staging.Outputs[OLE DB Source Output]" />
+              startId="Package\ETL Avions\Avions Staging.Outputs[OLE DB Source Output]" />
             <path
-              refId="Package\Data Flow Task.Paths[Union All Output 1]"
-              endId="Package\Data Flow Task\Upsert.Inputs[Conditional Split Input]"
+              refId="Package\ETL Avions.Paths[Union All Output 1]"
+              endId="Package\ETL Avions\Upsert.Inputs[Conditional Split Input]"
               name="Union All Output 1"
-              startId="Package\Data Flow Task\Union All.Outputs[Union All Output 1]" />
+              startId="Package\ETL Avions\Union All.Outputs[Union All Output 1]" />
             <path
-              refId="Package\Data Flow Task.Paths[Update]"
-              endId="Package\Data Flow Task\Test Update.Inputs[Conditional Split Input]"
+              refId="Package\ETL Avions.Paths[Update]"
+              endId="Package\ETL Avions\Test Update.Inputs[Conditional Split Input]"
               name="Update"
-              startId="Package\Data Flow Task\Upsert.Outputs[Update]" />
+              startId="Package\ETL Avions\Upsert.Outputs[Update]" />
           </paths>
         </pipeline>
       </DTS:ObjectData>
@@ -1706,7 +1706,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
       DTS:From="Package\Chargement Staging Avions"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"
-      DTS:To="Package\Data Flow Task" />
+      DTS:To="Package\ETL Avions" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
 <!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
@@ -1725,8 +1725,8 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           Id="Package\Chargement Staging Avions"
           TopLeft="77.3948365826699,127.547048673519" />
         <NodeLayout
-          Size="150.4,41.6"
-          Id="Package\Data Flow Task"
+          Size="129.6,41.6"
+          Id="Package\ETL Avions"
           TopLeft="98.5714287812614,215.647058634506" />
         <NodeLayout
           Size="234.4,41.6"
@@ -1756,18 +1756,30 @@ where [refTable].[TAIL_NUMBER] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="177.583132681966,169.147048673519">
+          TopLeft="181.39483658267,169.147048673519">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,46.500009960987"
+              EndConnector="-18.0234078014085,46.500009960987"
               Start="0,0"
-              End="0,39.000009960987">
+              End="-18.0234078014085,39.000009960987">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,39.000009960987" />
+                    End="0,19.2500049804935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.2500049804935"
+                    Point2="0,23.2500049804935"
+                    Point3="-4,23.2500049804935" />
+                  <mssgle:LineSegment
+                    End="-14.0234078014085,23.2500049804935" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-14.0234078014085,23.2500049804935"
+                    Point2="-18.0234078014085,23.2500049804935"
+                    Point3="-18.0234078014085,27.2500049804935" />
+                  <mssgle:LineSegment
+                    End="-18.0234078014085,39.000009960987" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1846,40 +1858,40 @@ where [refTable].[TAIL_NUMBER] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <TaskHost
-    design-time-name="Package\Data Flow Task">
+    design-time-name="Package\ETL Avions">
     <LayoutInfo>
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="152.8,41.6"
-          Id="Package\Data Flow Task\Derived Column"
+          Id="Package\ETL Avions\Derived Column"
           TopLeft="364.571429228296,165.458823435571" />
         <NodeLayout
           Size="120,41.6"
-          Id="Package\Data Flow Task\Union All"
+          Id="Package\ETL Avions\Union All"
           TopLeft="255.285714709941,266.39999981768" />
         <NodeLayout
           Size="108.8,41.6"
-          Id="Package\Data Flow Task\Upsert"
+          Id="Package\ETL Avions\Upsert"
           TopLeft="255.489796343029,349.206722434172" />
         <NodeLayout
           Size="170.4,41.6"
-          Id="Package\Data Flow Task\OLE DB Destination"
+          Id="Package\ETL Avions\OLE DB Destination"
           TopLeft="236.604081909824,497.700839908295" />
         <NodeLayout
           Size="135.2,41.6"
-          Id="Package\Data Flow Task\Test Update"
+          Id="Package\ETL Avions\Test Update"
           TopLeft="444.461225209439,350.736134151958" />
         <NodeLayout
           Size="148,41.6"
-          Id="Package\Data Flow Task\Avions Staging"
+          Id="Package\ETL Avions\Avions Staging"
           TopLeft="247.95918420131,46.3193276904917" />
         <NodeLayout
           Size="182.4,41.6"
-          Id="Package\Data Flow Task\Recherche Num Avion"
+          Id="Package\ETL Avions\Recherche Num Avion"
           TopLeft="134.285714571573,164.235294015762" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Update]"
+          Id="Package\ETL Avions.Paths[Update]"
           TopLeft="364.289796343029,370.771428293065">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1903,7 +1915,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          Id="Package\ETL Avions.Paths[Union All Output 1]"
           TopLeft="312.587755526485,307.99999981768">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1925,7 +1937,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
+          Id="Package\ETL Avions.Paths[OLE DB Source Output]"
           TopLeft="321.95918420131,87.9193276904917">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1959,7 +1971,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Match Output]"
+          Id="Package\ETL Avions.Paths[Lookup Match Output]"
           TopLeft="225.485714571573,205.835294015762">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -1995,7 +2007,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Lookup Error Output]"
+          Id="Package\ETL Avions.Paths[Lookup Error Output]"
           TopLeft="316.685714571573,185.647058725666">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2019,7 +2031,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Insert]"
+          Id="Package\ETL Avions.Paths[Insert]"
           TopLeft="324.246939126426,390.806722434172">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2043,7 +2055,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          Id="Package\ETL Avions.Paths[Derived Column Output]"
           TopLeft="440.971429228296,207.058823435571">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -2080,7 +2092,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\OLE DB Destination">
+    design-time-name="Package\ETL Avions\OLE DB Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2093,7 +2105,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Avions Staging">
+    design-time-name="Package\ETL Avions\Avions Staging">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -2106,7 +2118,7 @@ where [refTable].[TAIL_NUMBER] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Recherche Num Avion">
+    design-time-name="Package\ETL Avions\Recherche Num Avion">
     <Properties>
       <Property>
         <Name>OverwriteParamsSQLProp</Name>

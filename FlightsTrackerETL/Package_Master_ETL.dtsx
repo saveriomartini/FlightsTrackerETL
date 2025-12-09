@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+﻿<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="12/2/2025 11:32:57 PM"
@@ -11,9 +11,426 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionGUID="{F0410B33-6C7C-415A-967B-998677C67203}">
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{39188372-B2B9-4DA6-8EC9-2FA3273AC222}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[86.119.28.223.OLTP.read_user]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{240BB036-CF8B-4EC5-AC4B-A9FF6A795FB5}"
+      DTS:ObjectName="86.119.28.223.OLTP.read_user">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=86.119.28.223;User ID=read_user;Initial Catalog=OLTP;Provider=SQLOLEDB.1;Persist Security Info=True;Auto Translate=False;Application Name=SSIS-Package-{240BB036-CF8B-4EC5-AC4B-A9FF6A795FB5}86.119.28.223.OLTP.read_user;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAc39P/rCs709y1cHByQw3Y1MQ6FZn9EqlbNwe55dXMWAAAAAAOgAAAAAIAACAAAAB8hO7yv2euIjipOykQP2XH10jSw5xLX8jsksKqFfF5GCAAAAAACwc0Mu1DeMZmmeXzYMUn9x5Z2UJii8LFUr+Qa3W8uUAAAADpHIaiQLnBrcD3mLI5zx97i6L0Znfm9/f+K68dakOufjqzp/pSlBxyqRzUDWTh0OtSxJiMoQkiv1axK9NSVztP</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
   <DTS:Variables />
-  <DTS:Executables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Chargement Dimensions"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{AE54DC55-2F27-4922-BC8B-2A8FD90C96C9}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Chargement Dimensions">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Chargement Dimensions\Lance Dim Avions"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{FE3965CB-6787-41B1-A68D-B9C4FF62F7FB}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lance Dim Avions"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Package_Avions.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Chargement Dimensions\Lance Dim Clients"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{98944477-E9EE-43F6-8118-94A9D241F141}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lance Dim Clients"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Package_Clients.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Chargement Dimensions\Lance Dim Compagnies"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{A787F1F6-9EFB-49C9-AA4B-9748F50891A8}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lance Dim Compagnies"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Package_Compagnies.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Chargement Dimensions\Lance Dim ProfilsReservations"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{70088AEC-A0A9-49B3-B7C5-8FC57DEF766A}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lance Dim ProfilsReservations"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Package_ProfilsReservations.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Chargement Dimensions.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{01CDC099-8BF8-451E-B53A-99DBC4F11682}"
+          DTS:From="Package\Chargement Dimensions\Lance Dim Compagnies"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Chargement Dimensions\Lance Dim Avions" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Chargement Dimensions.PrecedenceConstraints[Constraint 1]"
+          DTS:CreationName=""
+          DTS:DTSID="{78FF59CD-8DD1-4D50-8A38-EE3F3198822B}"
+          DTS:From="Package\Chargement Dimensions\Lance Dim Avions"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 1"
+          DTS:To="Package\Chargement Dimensions\Lance Dim Clients" />
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Chargement Dimensions.PrecedenceConstraints[Constraint 2]"
+          DTS:CreationName=""
+          DTS:DTSID="{0E3EB965-AB84-4C2E-92A8-6ED2A0FE2F0B}"
+          DTS:From="Package\Chargement Dimensions\Lance Dim Clients"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint 2"
+          DTS:To="Package\Chargement Dimensions\Lance Dim ProfilsReservations" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Chargement Faits"
+      DTS:CreationName="STOCK:SEQUENCE"
+      DTS:Description="Sequence Container"
+      DTS:DTSID="{2F4F5C94-6AD0-4A6F-987F-6A6BA1A32D45}"
+      DTS:ExecutableType="STOCK:SEQUENCE"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Chargement Faits">
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\Chargement Faits\Lance Fait Reservations"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{6050CA2C-C8DC-48C7-B0E7-1C2A46B920D8}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lance Fait Reservations"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Package_Reservations.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+        <DTS:Executable
+          DTS:refId="Package\Chargement Faits\Lance Fait Vols"
+          DTS:CreationName="Microsoft.ExecutePackageTask"
+          DTS:Description="Execute Package Task"
+          DTS:DTSID="{E6E76B32-2AC9-4A95-9C64-0C5178128DA1}"
+          DTS:ExecutableType="Microsoft.ExecutePackageTask"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Lance Fait Vols"
+          DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <ExecutePackageTask>
+              <UseProjectReference>True</UseProjectReference>
+              <PackageName>Package_Vols.dtsx</PackageName>
+            </ExecutePackageTask>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:PrecedenceConstraints>
+        <DTS:PrecedenceConstraint
+          DTS:refId="Package\Chargement Faits.PrecedenceConstraints[Constraint]"
+          DTS:CreationName=""
+          DTS:DTSID="{4E80637E-4E3F-4C8C-B614-F6EE9F0C1BC4}"
+          DTS:From="Package\Chargement Faits\Lance Fait Vols"
+          DTS:LogicalAnd="True"
+          DTS:ObjectName="Constraint"
+          DTS:To="Package\Chargement Faits\Lance Fait Reservations" />
+      </DTS:PrecedenceConstraints>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{39DF4DDA-1414-43F8-B4EA-714452C61FBE}"
+      DTS:From="Package\Chargement Dimensions"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Chargement Faits" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\Chargement Dimensions\Lance Dim Clients"
+          TopLeft="121.800000521541,174.705882115657" />
+        <NodeLayout
+          Size="161.6,41.6"
+          Id="Package\Chargement Dimensions\Lance Dim Avions"
+          TopLeft="74.6571432783286,91.3529410122484" />
+        <NodeLayout
+          Size="188,41.6"
+          Id="Package\Chargement Dimensions\Lance Dim Compagnies"
+          TopLeft="23.9428574560857,20.2352940157624" />
+        <EdgeLayout
+          Id="Package\Chargement Dimensions.PrecedenceConstraints[Constraint]"
+          TopLeft="117.942857456086,61.8352940157624">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="37.5142858222429,29.517646996486"
+              Start="0,0"
+              End="37.5142858222429,22.017646996486">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.758823498243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.758823498243"
+                    Point2="0,14.758823498243"
+                    Point3="4,14.758823498243" />
+                  <mssgle:LineSegment
+                    End="33.5142858222429,14.758823498243" />
+                  <mssgle:CubicBezierSegment
+                    Point1="33.5142858222429,14.758823498243"
+                    Point2="37.5142858222429,14.758823498243"
+                    Point3="37.5142858222429,18.758823498243" />
+                  <mssgle:LineSegment
+                    End="37.5142858222429,22.017646996486" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Chargement Dimensions.PrecedenceConstraints[Constraint 1]"
+          TopLeft="155.457143278329,132.952941012248">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="47.5428572432122,41.7529411034086"
+              Start="0,0"
+              End="47.5428572432122,34.2529411034086">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,16.8764705517043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,16.8764705517043"
+                    Point2="0,20.8764705517043"
+                    Point3="4,20.8764705517043" />
+                  <mssgle:LineSegment
+                    End="43.5428572432122,20.8764705517043" />
+                  <mssgle:CubicBezierSegment
+                    Point1="43.5428572432122,20.8764705517043"
+                    Point2="47.5428572432122,20.8764705517043"
+                    Point3="47.5428572432122,24.8764705517043" />
+                  <mssgle:LineSegment
+                    End="47.5428572432122,34.2529411034086" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="219.2,41.6"
+          Id="Package\Chargement Dimensions\Lance Dim ProfilsReservations"
+          TopLeft="192.514286386358,248.882352638874" />
+        <EdgeLayout
+          Id="Package\Chargement Dimensions.PrecedenceConstraints[Constraint 2]"
+          TopLeft="203.000000521541,216.305882115657">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="99.1142858648176,32.5764705232167"
+              Start="0,0"
+              End="99.1142858648176,25.0764705232167">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,12.2882352616083" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,12.2882352616083"
+                    Point2="0,16.2882352616083"
+                    Point3="4,16.2882352616083" />
+                  <mssgle:LineSegment
+                    End="95.1142858648176,16.2882352616083" />
+                  <mssgle:CubicBezierSegment
+                    Point1="95.1142858648176,16.2882352616083"
+                    Point2="99.1142858648176,16.2882352616083"
+                    Point3="99.1142858648176,20.2882352616083" />
+                  <mssgle:LineSegment
+                    End="99.1142858648176,25.0764705232167" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="457.6,360.8"
+          Size="457.6,404"
+          Id="Package\Chargement Dimensions"
+          TopLeft="61.4285715593367,16.0588235153356" />
+        <NodeLayout
+          Size="148.8,41.6"
+          Id="Package\Chargement Faits\Lance Fait Vols"
+          TopLeft="80.257144598146,15.3294116608102" />
+        <NodeLayout
+          Size="189.6,41.6"
+          Id="Package\Chargement Faits\Lance Fait Reservations"
+          TopLeft="94.542858914271,104.035293935997" />
+        <EdgeLayout
+          Id="Package\Chargement Faits.PrecedenceConstraints[Constraint]"
+          TopLeft="154.657144598146,56.9294116608102">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="34.6857143161249,47.1058822751871"
+              Start="0,0"
+              End="34.6857143161249,39.6058822751871">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.5529411375936" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.5529411375936"
+                    Point2="0,23.5529411375936"
+                    Point3="4,23.5529411375936" />
+                  <mssgle:LineSegment
+                    End="30.6857143161249,23.5529411375936" />
+                  <mssgle:CubicBezierSegment
+                    Point1="30.6857143161249,23.5529411375936"
+                    Point2="34.6857143161249,23.5529411375936"
+                    Point3="34.6857143161249,27.5529411375936" />
+                  <mssgle:LineSegment
+                    End="34.6857143161249,39.6058822751871" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <ContainerLayout
+          HeaderHeight="43.2"
+          IsExpanded="True"
+          PanelSize="337.6,200.8"
+          Size="337.6,244"
+          Id="Package\Chargement Faits"
+          TopLeft="718.571430101079,198.823529237488" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="519.028571559337,218.058823515336">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="199.542858541742,102.764705722153"
+              Start="0,0"
+              End="192.042858541742,102.764705722153">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="95.7714292708711,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="95.7714292708711,0"
+                    Point2="99.7714292708711,0"
+                    Point3="99.7714292708711,4" />
+                  <mssgle:LineSegment
+                    End="99.7714292708711,98.7647057221527" />
+                  <mssgle:CubicBezierSegment
+                    Point1="99.7714292708711,98.7647057221527"
+                    Point2="99.7714292708711,102.764705722153"
+                    Point3="103.771429270871,102.764705722153" />
+                  <mssgle:LineSegment
+                    End="192.042858541742,102.764705722153" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
 </DTS:Executable>

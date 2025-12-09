@@ -11,8 +11,8 @@
   DTS:LocaleID="8192"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="32"
-  DTS:VersionGUID="{2840D4EC-4956-4609-8991-5AC166988018}">
+  DTS:VersionBuild="33"
+  DTS:VersionGUID="{FEBC0994-ACC0-4F0D-9F2C-C99906158290}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -29,7 +29,7 @@
           <DTS:Password
             DTS:Name="Password"
             Sensitive="1"
-            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABAtMlGeaw1vofPFPSzwUA4GP3bZ3c4X2UabMD7GijATgAAAAAOgAAAAAIAACAAAABU1ccNLOvdoazW4uTCi6KZXVIgAMtvS4fRpnQFuvr5PSAAAABaiTnognOP7wXU1Du/ckPAL8LCWixkWNIa49spllHIDUAAAAChL8A/R4cr8zc8I5jmnc/L90DsJlEon1oBY6nJnYW6bvJgXppfdB8j74UZtOprP4tyoV4et8EcT0M0y8lnHlG0</DTS:Password>
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAAMQ2WIyTvkqnctrauGrxCwAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAB3KPGj+CKUg7AdqAhWPeyNCIEyuAtq0IMziCoZuxXYzQAAAAAOgAAAAAIAACAAAAACv0eTaISwsdPJEO+ww5ahTFEd4Del4LAYvdQtO2FvRyAAAAAhWBC5tGjA/fQ0dCaTixaws2sbdbJ0hG2xTtsZ6ThJk0AAAACGMm028DLlBLKgqdLNPkdcv28/LlMGHKPQGOWVj97/YWhuGhwxYymb+r5/MHb1wWXZDexvTu+BsHr0ROU0qdcK</DTS:Password>
         </DTS:ConnectionManager>
       </DTS:ObjectData>
     </DTS:ConnectionManager>
@@ -3184,7 +3184,7 @@ where [refTable].[AIRPORT] = ?</property>
     design-time-name="Package\Chargement Staging Clients">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
           Size="148,41.6"
           Id="Package\Chargement Staging Clients\Staging Clients"
@@ -3212,7 +3212,9 @@ where [refTable].[AIRPORT] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -3250,49 +3252,49 @@ where [refTable].[AIRPORT] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="162.4,41.6"
-          Id="Package\ETL Clients\Insert Destination"
-          TopLeft="159.700000021287,774.852941126197" />
-        <NodeLayout
-          Size="192,41.6"
-          Id="Package\ETL Clients\Ouverture START_DATE"
-          TopLeft="159.700000021287,673.252941126197" />
-        <NodeLayout
-          Size="208,41.6"
-          Id="Package\ETL Clients\Slowly Changing Dimension"
-          TopLeft="136.900000021287,266.852941126198" />
+          Size="133.6,41.6"
+          Id="Package\ETL Clients\SCD Type 1"
+          TopLeft="301.700000021287,368.452941126199" />
         <NodeLayout
           Size="129.6,41.6"
           Id="Package\ETL Clients\Union All 1"
           TopLeft="480.000001021794,259.941176256764" />
         <NodeLayout
-          Size="120,41.6"
-          Id="Package\ETL Clients\Union All"
-          TopLeft="180.900000021287,571.652941126198" />
+          Size="182.4,41.6"
+          Id="Package\ETL Clients\Fermeture END_DATE"
+          TopLeft="27.5000000212874,368.452941126199" />
+        <NodeLayout
+          Size="208,41.6"
+          Id="Package\ETL Clients\Slowly Changing Dimension"
+          TopLeft="136.900000021287,266.852941126198" />
+        <NodeLayout
+          Size="192,41.6"
+          Id="Package\ETL Clients\Ouverture START_DATE"
+          TopLeft="159.700000021287,673.252941126197" />
         <NodeLayout
           Size="148,41.6"
           Id="Package\ETL Clients\Staging Clients"
           TopLeft="149.042857126131,29.2411764504793" />
         <NodeLayout
-          Size="253.6,41.6"
-          Id="Package\ETL Clients\Recherche PREFERRED_AIRPORT_ID"
-          TopLeft="96.9571428419375,130.076470568796" />
+          Size="120,41.6"
+          Id="Package\ETL Clients\Union All"
+          TopLeft="180.900000021287,571.652941126198" />
+        <NodeLayout
+          Size="162.4,41.6"
+          Id="Package\ETL Clients\Insert Destination"
+          TopLeft="159.700000021287,774.852941126197" />
         <NodeLayout
           Size="166.4,41.6"
           Id="Package\ETL Clients\Erreur Aeroport ID"
           TopLeft="507.142858222431,134.52941166081" />
         <NodeLayout
-          Size="182.4,41.6"
-          Id="Package\ETL Clients\Fermeture END_DATE"
-          TopLeft="27.5000000212874,368.452941126199" />
+          Size="253.6,41.6"
+          Id="Package\ETL Clients\Recherche PREFERRED_AIRPORT_ID"
+          TopLeft="96.9571428419375,130.076470568796" />
         <NodeLayout
           Size="133.6,41.6"
           Id="Package\ETL Clients\SCD Type 2"
           TopLeft="15.5000000212874,470.052941126198" />
-        <NodeLayout
-          Size="133.6,41.6"
-          Id="Package\ETL Clients\SCD Type 1"
-          TopLeft="301.700000021287,368.452941126199" />
         <EdgeLayout
           Id="Package\ETL Clients.Paths[Union All Output 11]"
           TopLeft="480.000001021794,284.197058691481">
@@ -3497,7 +3499,7 @@ where [refTable].[AIRPORT] = ?</property>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="28.6764709714967,5,91.7327734375,11.609375"
+              BoundingBox="28.6764709714965,5,91.7327734375,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
@@ -3679,19 +3681,6 @@ where [refTable].[AIRPORT] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Clients\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\ETL Clients\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -3782,6 +3771,19 @@ where [refTable].[AIRPORT] = ?</property>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ETL Clients\Staging Clients">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Clients\Insert Destination">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
